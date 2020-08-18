@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>数据结构知识点添加</title>
+    <style>
+        body{
+            height: 50%;
+            padding: 100px;
+            background-image:url("1.jpg");
+            background-repeat:no-repeat ;
+            background-size:100% 100%;
+            background-attachment: fixed;"
+
+
+        }
+        textarea{
+            font-size:18px;
+            color: rgb(0, 0, 0);
+        }
+        #button_1{
+            font-size:18px;
+            background: bisque;
+            border:none;
+
+        }
+        #word_size{
+            font-size:18px;
+            color: rgb(200, 100, 150);
+        }
+        a:link{
+            font-size:18px;
+            color: rgb(0, 0, 0);
+            background-color: bisque;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<h2  style="text-align:center;color: " id="word_size">知识点添加</h2>
+<div style="text-align:center">
+    <br><br>
+    <form action="/register" method="post">
+        <label for=""  id="word_size">名称</label>
+        <br>
+        <input type="text" name="point">
+        <br>
+        <br>
+        <label for="" id="word_size">详细说明</label>
+        <br>
+        <br>
+        <textarea name="explanation" style="width:800px;height:150px;">
+        </textarea>
+        <br>
+        <br>
+        <input type="submit" value="添加" id="button_1">
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <a href="home.html" >返回</a>
+    </form>
+    <h2 th:utext="${msg1}"></h2>
+</div>
+
+<!--<div style="text-align:center">
+    <form action="/getuser" method="post">
+        <label for="" style="color: rgb(87,16,59)">目录</label>
+        <br>
+        <input type="text" name="point">
+        <input type="submit" value="查找">
+    </form>
+    <h2 th:utext="${msg}"></h2>
+</div>-->
+</body>
+</html>

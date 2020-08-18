@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>知识点详情</title>
+    <style>
+        body{
+            height: 50%;
+            padding: 100px;
+            background-color: rgb(162, 188, 238);
+            background-image:url("1.jpg");
+            background-repeat:no-repeat ;
+            background-size:100% 100%;
+            background-attachment: fixed;"
+        }
+        textarea{
+            font-size:18px;
+            color: rgb(0, 0, 0);
+        }
+        #button_1{
+            font-size:18px;
+            background: bisque;
+            border:none;
+
+        }
+        #word_size{
+            font-size:18px;
+            color: rgb(200, 100, 150);
+        }
+        a:link{
+            font-size:18px;
+            color: rgb(0, 0, 0);
+            background-color: bisque;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+<form action="/login">
+
+    <table style="margin-top:10px;margin-left:20px;">
+        <thead>
+        <div>
+            <br>
+            <label for=""id="word_size">目录</label>
+            <input type="text" name="point" id="word_size">
+            <input type="submit" value="查看" id="button_1">
+            <br>
+            <br>
+            <br>
+            <label for="" id="word_size">详细说明</label>
+            <br>
+            <br>
+            <textarea name="explanation" style="width:800px;height:150px;"></textarea>
+        </div>
+
+        <tr th:each="User:${userList}" style="text-align:center;vertical-align:middle;">
+            <td th:text="${User.ID}"></td>
+            <td th:text="${User.point}"></td>
+            <td th:text="${User.explanation}"></td>
+        </tr>
+        </thead>
+    </table>
+
+    <br>
+    <a href="home.html" >返回</a>
+</form>
+</body>
+</html>

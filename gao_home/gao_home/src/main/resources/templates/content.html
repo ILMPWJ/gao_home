@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>数据结构知识点操作</title>
+    <style>
+        body{
+            height: 50%;
+            padding: 100px;
+            background-image:url("1.jpg");
+            background-repeat:no-repeat ;
+            background-size:100% 100%;
+            background-attachment: fixed;"
+
+        }
+        textarea{
+            font-size:18px;
+            color: rgb(200, 100, 150);
+        }
+        #button_1{
+            font-size:18px;
+            background: bisque;
+            border:none;
+
+
+
+        }
+        #word_size{
+            font-size:18px;
+            color: rgb(200, 100, 150);
+        }
+        a:link{
+            font-size:18px;
+            color: rgb(0, 0, 0);
+            background-color: bisque;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+<h2 style="text-align:center" id="word_size">知识点操作</h2>
+
+<div style="text-align:center">
+    <br>
+    <form action="/deleteuser" method="post">
+        <label for=""id="word_size"></label>
+        <input type="text" name="point">
+        <input type="submit" value="搜索"  id="word_size" style="text-align:center">
+    </form>
+    <h2 th:utext="${msg3}"></h2>
+</div>
+
+<div style="text-align:center">
+    <form action="/updateuser" method="post">
+        <label for=""id="word_size" >名称</label>
+        <input type="text" name="point">
+        <br><br>
+        <label for=""id="word_size"style="line-height:50px;">知识点介绍</label>
+        <br>
+        <textarea name="explanation" style="width:800px;height:150px;"></textarea>
+        <br>
+        <br>
+        <br>
+        <input style="line-height:30px;" type="submit" value="更改" id="button_1" >
+        &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <input style="line-height:30px;" type="submit" value="删除" id="button_1" >
+    </form>
+    <h2 th:utext="${msg4}"></h2>
+</div>
+
+<div style="text-align:center">
+    <br>
+    <form action="/display" method="post">
+
+        <a href="home.html" >返回</a>
+    </form>
+</div>
+</body>
+</html>
